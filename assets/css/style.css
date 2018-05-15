@@ -1,0 +1,25 @@
+body {
+    background-image: url("../images/cave.jpg");
+    height: 600px;
+    margin: 0;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.jumbotron {
+    text-align: center;
+    height: 250px;
+    margin-bottom: 5px;
+}
+.display-4 {
+    margin-top: -60px;
+}
+h3 {
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    padding: 5px;
+    background-color: #9e9494;
+    width: 200px;
+    text-decoration: underline;
+}
