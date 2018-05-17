@@ -1,16 +1,16 @@
 //beginning game function
 $(document).ready(function(){
 //---Variables(top to bottom):
-//making the random number/target score between 16-140
-var random=Math.floor(Math.random()*124+16)
+//making the random number/target score between 16-100
+var random=Math.floor(Math.random()*84+16)
 //calling random number/target score to html
 $("#randomNumber").text(random);
 
 //making the random number for each gem between 1-12
-var gem1= Math.floor(Math.random()*11+1)
-var gem2= Math.floor(Math.random()*11+1)
-var gem3= Math.floor(Math.random()*11+1)
-var gem4= Math.floor(Math.random()*11+1)
+var gem1= Math.floor(Math.random()*11+1);
+var gem2= Math.floor(Math.random()*11+1);
+var gem3= Math.floor(Math.random()*11+1);
+var gem4= Math.floor(Math.random()*11+1);
 
 //making other user controlled(action needed) variables
 var totalScore= 0;
@@ -25,7 +25,7 @@ $("#totalLosses").text(losses);
 //reset game
 function reset(){
     Random=Math.floor(Math.random()*124+16);
-    console.log(random)
+    console.log(random);
     $('#randomNumber').text(random);
     gem1= Math.floor(Math.random()*11+1);
     gem2= Math.floor(Math.random()*11+1);
@@ -41,7 +41,7 @@ function winner(){
     alert("You're a Winner!");
         wins++;
         $("#totalWins").text(wins);
-        reset()
+        reset();
 }
 
 //adding up losses
@@ -50,7 +50,7 @@ function loser(){
     alert("You're a loser! Play Again!");
         losses++;
         $("#totalLosses").text(losses);
-        reset()
+        reset();
 }
 //.onclick events for each gem button
 //calling buttons to html
@@ -66,7 +66,7 @@ $("#1").on("click", function(){
         else if(totalScore > random){
             loser();
         }
-})
+});
 $("#2").on("click", function(){
     totalScore =totalScore + gem2;
     console.log("New totalScore= " + totalScore);
@@ -77,7 +77,7 @@ $("#2").on("click", function(){
         else if(totalScore > random){
             loser();
         }
-})
+});
 $("#3").on("click", function(){
     totalScore =totalScore + gem3;
     console.log("New totalScore= " + totalScore);
@@ -88,7 +88,7 @@ $("#3").on("click", function(){
         else if(totalScore > random){
             loser();
         }
-})
+});
 $("#4").on("click", function(){
     totalScore =totalScore + gem4;
     console.log("New totalScore= " + totalScore);
@@ -99,5 +99,6 @@ $("#4").on("click", function(){
         else if(totalScore > random){
             loser();
         }
-})
-})
+});
+
+});
