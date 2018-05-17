@@ -17,14 +17,14 @@ var totalScore= 0;
 var wins= 0;
 var losses= 0;
 
-//keeping track of wins and losses
-//calling wins/losses to html
+//calling other user controlled variables at 0 to html
 $("#totalWins").text(wins);
 $("#totalLosses").text(losses);
+$("#guessedScore").text(totalScore);
 //---Functions(bottom to top):
 //reset game
 function reset(){
-    Random=Math.floor(Math.random()*124+16);
+    random=Math.floor(Math.random()*124+16);
     console.log(random);
     $('#randomNumber').text(random);
     gem1= Math.floor(Math.random()*11+1);
